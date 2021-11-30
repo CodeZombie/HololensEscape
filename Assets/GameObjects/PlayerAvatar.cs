@@ -27,7 +27,6 @@ public class PlayerAvatar : MonoBehaviour
             lastPosition = transform.position;
             nextActionTime += updateCheckPeriod;
 
-            Debug.Log(animator.GetFloat("MoveSpeed"));
         }
     }
 }
