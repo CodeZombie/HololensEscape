@@ -10,8 +10,8 @@ public class PositionResetter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        originalPosition = gameObject.transform.position;
-        originalRotation = gameObject.transform.rotation;
+        originalPosition = gameObject.transform.localPosition;
+        originalRotation = gameObject.transform.localRotation;
         rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -21,7 +21,7 @@ public class PositionResetter : MonoBehaviour
         if(transform.position.y < -10)
         {
             rigidbody.transform.localRotation = originalRotation;
-            rigidbody.transform.position = originalPosition;
+            rigidbody.transform.localPosition = originalPosition;
 
             rigidbody.velocity = Vector3.zero;
             rigidbody.angularVelocity = Vector3.zero;
