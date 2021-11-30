@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/DESKTOPGAME.unity
     guid: 999af08ff27e8ee4b88a6065cd74c41e
   - enabled: 1
+    path: Assets/Scenes/ARLobby.unity
+    guid: 759b41e4e068ef642a4e61bcf47e3f69
+  - enabled: 1
     path: Assets/Scenes/ARGAME.unity
     guid: 4c76692a39a8b444da4f7d53006a9682
   m_configObjects:

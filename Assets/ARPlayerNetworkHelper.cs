@@ -6,6 +6,8 @@ using Photon.Pun;
 public class ARPlayerNetworkHelper : MonoBehaviour
 {
     public GameObject GamePieceContainer;
+    public GameObject GodHead;
+    public Camera ARCamera;
     void Start()
     {
         //Go through all the objects we want to control, and request ownership of all of them.
@@ -17,11 +19,13 @@ public class ARPlayerNetworkHelper : MonoBehaviour
         {
             pv.RequestOwnership();
         }
+        GodHead.GetComponent<PhotonView>().RequestOwnership();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        GodHead.transform.position = ARCamera.transform.position;
+        GodHead.transform.localRotation = ARCamera.transform.localRotation;
     }
 }
