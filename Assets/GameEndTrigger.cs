@@ -19,7 +19,7 @@ public class GameEndTrigger : MonoBehaviourPun
     {
         if (!levelOver)
         {
-            if (Vector3.Distance(FlagPole.transform.position, Player.transform.position) < 2.0)
+            if (Vector3.Distance(FlagPole.transform.localPosition, Player.transform.localPosition) < 2.0)
             {
                 Debug.Log("LEVEL OVER");
                 this.photonView.RPC("GameOver", RpcTarget.All);

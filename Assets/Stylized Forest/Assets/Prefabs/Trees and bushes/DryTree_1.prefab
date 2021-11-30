@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 33000011125196646}
   - component: {fileID: 23000013164866510}
   - component: {fileID: 136000011971760806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DryTree_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1000011694247070}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.22
   m_Height: 5.15
   m_Direction: 1
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 3649
-  materialHash: 8c4c57968be14cd879ca2963fe5bf994215482368
+  materialHash: b3033a6c6cce297a5b4b46781f3e93e9215482368
   root:
     _uniqueID: 1
     seed: 2486486

@@ -20,6 +20,7 @@ public class ARPlayerNetworkHelper : MonoBehaviour
             pv.RequestOwnership();
         }
         GodHead.GetComponent<PhotonView>().RequestOwnership();
+        GodHead.GetComponent<MeshRenderer>().enabled = false;
     }
 
     // Update is called once per frame
