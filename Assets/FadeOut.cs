@@ -28,9 +28,6 @@ public class FadeOut : MonoBehaviour
                 Color newColor = imageToFadeOut.color;
                 newColor.a -= 0.01f;
                 imageToFadeOut.color = newColor;
-
-
-
             }
             else
             {

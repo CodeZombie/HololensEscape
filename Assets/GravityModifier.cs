@@ -14,7 +14,5 @@ public class GravityModifier : MonoBehaviour
     void Update()
     {
         Physics.gravity = -this.transform.up;
-        Debug.Log(Physics.gravity);
-
     }
 }

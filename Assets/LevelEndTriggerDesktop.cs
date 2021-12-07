@@ -8,7 +8,6 @@ public class LevelEndTriggerDesktop : MonoBehaviourPun
 {
     public GameObject LevelEndContentContainer;
     public string NextLevelName;
-    public float startTime;
     public TextMeshPro textMeshPro;
     public Text text;
     // Start is called before the first frame update
@@ -17,24 +16,20 @@ public class LevelEndTriggerDesktop : MonoBehaviourPun
         LevelEndContentContainer.SetActive(false);
     }
     
-    [PunRPC]
-    void GameStart()
-    {
-        startTime = Time.time;
-    }
 
     [PunRPC]
-    void GameOver()
+    void GameOver(float time)
     {
+        Debug.Log("LEVEL ENDED!!!!!");
         LevelEndContentContainer.SetActive(true);
         StartCoroutine(ChangeLevel(NextLevelName));
         if(textMeshPro != null)
         {
-            textMeshPro.text = "Complete in " + Mathf.Floor(Time.time - startTime).ToString() + "s";
+            textMeshPro.text = "Complete in " + Mathf.Floor(time).ToString() + "s";
         }
         if(text != null)
         {
-            text.text = "Complete in " + Mathf.Floor(Time.time - startTime).ToString() + "s";
+            text.text = "Complete in " + Mathf.Floor(time).ToString() + "s";
         }
     }
 

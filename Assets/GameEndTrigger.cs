@@ -8,10 +8,11 @@ public class GameEndTrigger : MonoBehaviourPun
     public GameObject FlagPole;
     public GameObject Player;
     private bool levelOver = false;
+    private float startTime;
     // Start is called before the first frame update
     void Start()
     {
-        
+        startTime = Time.time;
     }
 
     // Update is called once per frame
@@ -21,8 +22,7 @@ public class GameEndTrigger : MonoBehaviourPun
         {
             if (Vector3.Distance(FlagPole.transform.localPosition, Player.transform.localPosition) < 2.0)
             {
-                Debug.Log("LEVEL OVER");
-                this.photonView.RPC("GameOver", RpcTarget.All);
+                this.photonView.RPC("GameOver", RpcTarget.All, Time.time - startTime);
                 levelOver = true;
             }
         }

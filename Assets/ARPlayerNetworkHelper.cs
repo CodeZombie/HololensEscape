@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class ARPlayerNetworkHelper : MonoBehaviour
+public class ARPlayerNetworkHelper : MonoBehaviourPun
 {
     public GameObject GamePieceContainer;
     public GameObject GodHead;
@@ -20,7 +20,7 @@ public class ARPlayerNetworkHelper : MonoBehaviour
             pv.RequestOwnership();
         }
         GodHead.GetComponent<PhotonView>().RequestOwnership();
-        GodHead.GetComponent<MeshRenderer>().enabled = false;
+        GodHead.GetComponentInChildren<MeshRenderer>().enabled = false;
     }
 
     // Update is called once per frame
