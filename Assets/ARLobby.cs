@@ -15,7 +15,6 @@ public class ARLobby : MonoBehaviourPunCallbacks
     void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
-        
     }
 
     public override void OnConnectedToMaster()
@@ -32,9 +31,7 @@ public class ARLobby : MonoBehaviourPunCallbacks
         foreach(RoomInfo room in roomList)
         {
             AddRoomButton(room.Name);
-            lobbyCount++;
         }
-        Debug.Log("Lobby Count: " + lobbyCount.ToString());
     }
 
     public void AddRoomButton(string name)
@@ -46,7 +43,8 @@ public class ARLobby : MonoBehaviourPunCallbacks
         roomButton.GetComponent<ButtonConfigHelper>().OnClick.AddListener(() => JoinRoom(name));
         roomButton.transform.localPosition = new Vector3(0f, 0.3f - (lobbyCount * 0.3f), -1.0f);
         roomButton.transform.localScale = new Vector3(10, 10, 1);
-        
+        roomButton.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        lobbyCount++;
     }
 
     public void JoinRoom(string name)
