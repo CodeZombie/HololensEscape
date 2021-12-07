@@ -18,7 +18,8 @@ public class PositionResetter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < -10)
+        //if(transform.localPosition.y < -10)
+        if(Vector3.Distance(transform.localPosition, originalPosition) > 100)
         {
             rigidbody.transform.localRotation = originalRotation;
             rigidbody.transform.localPosition = originalPosition;

@@ -138,9 +138,33 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -8.45
       objectReference: {fileID: 0}
+    - target: {fileID: 2274696660947342782, guid: 555175e6c53b3ed4ab4456d67f86ad1a, type: 3}
+      propertyPath: sceneViewId
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2505020844241686168, guid: 555175e6c53b3ed4ab4456d67f86ad1a, type: 3}
       propertyPath: m_Name
       value: LevelOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927848009504315280, guid: 555175e6c53b3ed4ab4456d67f86ad1a, type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390885624734732237, guid: 555175e6c53b3ed4ab4456d67f86ad1a, type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873800615066723939, guid: 555175e6c53b3ed4ab4456d67f86ad1a, type: 3}
+      propertyPath: sceneViewId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832346532612016700, guid: 555175e6c53b3ed4ab4456d67f86ad1a, type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267019026956121291, guid: 555175e6c53b3ed4ab4456d67f86ad1a, type: 3}
+      propertyPath: sceneViewId
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8671541938847942580, guid: 555175e6c53b3ed4ab4456d67f86ad1a, type: 3}
       propertyPath: m_RootOrder
